@@ -6,7 +6,7 @@
         <p class="mt-lg-3 mb-lg-4 ">
             Sistem Informasi Toluwaya hadir untuk temukan semua yang kamu perlukan dalam desa, untuk kegunaan diri sendiri dan orang lain
         </p>
-        <a href="#services" class="btn btn-lg btn-success">
+        <a href="#services" class="btn btn-lg btn-brand-costume">
             Cari Disini
             <i class="bi bi-chevron-down ms-2"></i>
         </a>
@@ -18,44 +18,37 @@
 <!-- Services Section -->
 <section id="services" class="py-5">
     <div class="container">
-        <h1 class="text-center text-success">Layanan Kami</h1>
+        <h1 class="text-center">Layanan Kami</h1>
         <p class="text-center">Sistem Informasi Toluwaya hadir untuk menjadi solusi bagi kalian</p>
         <hr>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-            <div class="col">
-                <a href="#berita" class="text-decoration-none">
-                    <div class="card h-100 border-0 shadow">
-                        <img src="img/informasi.jpg" class="card-img-top img-fluid" alt="Informasi Kegiatan Desa">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-dark">Informasi Kegiatan Desa</h5>
-                            <p class="card-text text-dark">Cari tahu tentang semua informasi yang ada di desamu disini, mulai dari kegiatan internal maupun eksternal.</p>
-                        </div>
-                    </div>
-                </a>
+
+        <form method="post" action="/ajukansurat" id="suratForm">
+            <div class="mb-3">
+                <label for="deskripsi" class="form-label">Deskripsikan surat tujuan pembuatan surat</label>
+                <textarea type="text" class="form-control" id="deskirpsi" placeholder="Contoh: saya ingin membuat surat keterangan KIP"></textarea>
             </div>
-            <div class="col">
-                <a href="/surat" class="text-decoration-none">
-                    <div class="card h-100 border-0 shadow">
-                        <img src="img/urussurat.jpg" class="card-img-top img-fluid" alt="Pengurusan Surat">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-dark">Pengurusan Surat</h5>
-                            <p class="card-text text-dark">Sistem Informasi Toluaya menyediakan semua yang berhubungan dengan surat menyurat.</p>
-                        </div>
-                    </div>
-                </a>
+
+            <div class="mb-3">
+                <label for="jenisSurat" class="form-label">Jenis Surat</label>
+                <select class="form-select" id="jenisSurat" name="jenisSurat" onchange="updateForm()" required>
+                    <option value="">-- Pilih Jenis Surat --</option>
+                    <option value="sktm">Surat Keterangan Tidak Mampu</option>
+                    <option value="skkb">Surat Keterangan Kelakuan Baik</option>
+                    <option value="skd">Surat Keterangan Domisili</option>
+                    <option value="skl">Surat Keterangan Lokasi</option>
+                    <option value="skk">Surat Keterangan Kematian</option>
+                    <option value="sku">Surat Keterangan Usaha</option>
+                    <option value="skt">Surat Keterangan Tanah</option>
+                    <option value="sk">Surat Keterangan</option>
+                    <option value="si">Surat Izin</option>
+                </select>
             </div>
-            <div class="col">
-                <a href="/statistik" class="text-decoration-none">
-                    <div class="card h-100 border-0 shadow">
-                        <img src="img/datapenduduk.jpg" class="card-img-top img-fluid" alt="Data Kependudukan">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-dark">Data Kependudukan</h5>
-                            <p class="card-text text-dark">Cari tahu tentang semua informasi yang ada di desamu disini, mulai dari kegiatan internal maupun eksternal.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+
+            <!-- Kontainer dinamis -->
+            <div id="formTambahan"></div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </section>
 <!-- End Services Section -->

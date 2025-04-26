@@ -137,8 +137,8 @@
   text-shadow: #070707;
 }
 
-.btn-brand {
-  background-color: #ff9900;
+.btn-brand-costume {
+  background-color: #8C6C53;
   color: white;
   font-weight: 600;
   border-radius: 50px;
@@ -546,6 +546,16 @@ footer a:hover {
   }
 }
 
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/149/149071.png');
+  /* atau ganti dengan /assets/img/user.png */
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ffffff;
+}
 /* Surat */
 #surat {
   margin-top: 2rem;

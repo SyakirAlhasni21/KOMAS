@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar .nav-item .nav-link {
+    transition: background-color 0.2s;
+}
+
+.sidebar .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.sidebar .nav-item.active .nav-link {
+    background-color: #1cc88a;
+    color: #ffffff;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #ffffff 0%, #f8f9fc 100%);
+}
+
+.topbar .nav-link {
+    color: #4e73df;
+}
+
+.topbar .nav-link:hover {
+    color: #224abe;
+}
+
+.btn {
+    border-radius: 0.4rem;
+}

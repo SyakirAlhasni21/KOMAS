@@ -9,26 +9,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto gap-3 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link fw-bold text-white" href="/">Permintaan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/profile">Profil</a>
+                    <a class="nav-link fw-bold text-white" href="/profile">List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/struktur">Struktur</a>
+                    <a class="nav-link fw-bold text-white" href="/struktur">FAQ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/statistik">Statistik</a>
-                </li>
-                <li class="nav-item d-flex gap-3 justify-content-lg-center">
-                    <?php if (session()->get('logged_in')): ?>
-                        <a class="btn btn-brand btn-sm px-4" href="/pesan"><i class="bi bi-envelope"></i></a>
-                        <a class="btn btn-danger btn-sm px-4" href="/logout">
-                            <i class="bi bi-box-arrow-right"></i>
-                        </a>
-                    <?php else: ?>
-                        <a href="/login" class="btn btn-success btn-sm px-4">LOGIN</a>
-                    <?php endif; ?>
+
+                <!-- Dropdown Profil -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="profile-icon me-1"></div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item text-danger" href="/logout">Logout</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
